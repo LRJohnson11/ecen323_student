@@ -1,14 +1,14 @@
 //////
 //this fil is the ALU for the RISC-V processor
 /////
-`include "riscv_alu_constants.sv"
+`include "alu_defs.sv"
 
 module alu #(
-    parameter BUS_WIDTH = 8
+    parameter BUS_WIDTH = 32
     ) (
     input logic [BUS_WIDTH - 1:0] op1, // first operand
     input logic [BUS_WIDTH - 1:0] op2, // second operand
-    input logic [3:0] alu_control, // control signal for ALU operation
+    input logic [3:0] alu_op, //coes for alu operations
     output logic [BUS_WIDTH - 1:0] result, // result of the ALU operation
     output logic zero // zero flag
 );
@@ -17,7 +17,7 @@ localparam bytesForBusWidth = $clog2(BUS_WIDTH);
 
     // ALU operations
     always_comb begin
-        case (alu_control)
+        case (alu_op)
             ALUOP_AND: result = op1 & op2; //and
             ALUOP_OR: result = op1 | op2; //or
             ALUOP_ADD: result = op1 + op2; //add
