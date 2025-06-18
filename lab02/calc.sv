@@ -14,28 +14,36 @@ module calc
     localparam busWidthAsBits = $clog2(BUS_WIDTH);
 
 
-    logic[BUS_WIDTH/2: 0] accumulator;
+    logic[BUS_WIDTH/2 - 1: 0] accumulator;
     logic[BUS_WIDTH - 1: 0] op1, op2, result;
     logic[2:0] opSignal;
-    alu_op_t alu_op;
+    logic[1:0] btnd_oneShot;
+    logic[3:0] alu_op;
 
-    assign op1[BUS_WIDTH -1: BUS_WIDTH/2] = accumulator[BUS_WIDTH/2 - 1] == 1 ? 4'hffff : 4'h0000;
-    assign op2[BUS_WIDTH -1: BUS_WIDTH/2] = sw[BUS_WIDTH/2 - 1] == 1 ? 4'hffff : 4'b0000;
+    // assign op1[BUS_WIDTH -1: BUS_WIDTH/2] = accumulator[BUS_WIDTH/2 - 1] == 1 ? 4'hffff : 4'h0000;
+    // assign op2[BUS_WIDTH -1: BUS_WIDTH/2] = sw[BUS_WIDTH/2 - 1] == 1 ? 4'hffff : 4'b0000;
 
-    assign opSignal = {btnl,btnc,btnl};
+assign op1 = $signed(accumulator);
+assign op2 = $signed(sw);
+
+
+    assign opSignal = {btnl,btnc,btnr};
 
 //btnd oneshot
-
+always_ff @(posedge clk) begin
+    btnd_oneShot[0] <= btnd;
+    btnd_oneShot[1] <= btnd_oneShot[0];
+end
 
 //register for results
 always_ff @( posedge clk ) begin
     if(btnu) accumulator <= 0;
-    else if(btnd) accumulator <= result[BUS_WIDTH/2 - 1: 0];
+    else if(btnd_oneShot[0] && !btnd_oneShot[1]) accumulator <= result[BUS_WIDTH/2 - 1: 0];
     
 end
 
 alu #(.BUS_WIDTH(BUS_WIDTH))
-(.op1(op1), .op2(op2), .result(result), .alu_op(alu_op), .zero(zero));
+myAlu (.op1(op1), .op2(op2), .result(result), .alu_op(alu_op), .zero(zero));
 
 
 assign led = accumulator;

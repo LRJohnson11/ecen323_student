@@ -1,7 +1,7 @@
 //////
 //this fil is the ALU for the RISC-V processor
 /////
-`include "alu_defs.sv"
+import alu_defs::*;
 
 module alu #(
     parameter BUS_WIDTH = 32
