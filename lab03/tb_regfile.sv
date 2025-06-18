@@ -14,7 +14,11 @@
 // Note for Instructor and TA's: If this testbench is modified, make sure that the exercise questions from the learning  
 // suite lab report are accurate with corresponding the simulation timing and answer. 
 
-module tb_regfile();
+module tb_regfile #(
+    parameter BUS_WIDTH = 32
+)(
+
+);
 
 	logic tb_clk, tb_write;
     logic tb_init = 0;
@@ -23,7 +27,7 @@ module tb_regfile();
 
 
 	// Instance regfile module
-    regfile my_regfile(.clk(tb_clk), .readReg1(regAddrA), .readReg2(regAddrB), .writeReg(regAddrWrite),
+    regfile #(.BUS_WIDTH(BUS_WIDTH)) my_regfile(.clk(tb_clk), .readReg1(regAddrA), .readReg2(regAddrB), .writeReg(regAddrWrite),
         .writeData(regWriteData), .write(tb_write), .readData1(regReadDataA), .readData2(regReadDataB));
 
 
