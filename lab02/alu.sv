@@ -4,7 +4,7 @@
 import alu_defs::*;
 
 module alu #(
-    parameter BUS_WIDTH = 32
+    parameter BUS_WIDTH = 8
     ) (
     input logic [BUS_WIDTH - 1:0] op1, // first operand
     input logic [BUS_WIDTH - 1:0] op2, // second operand

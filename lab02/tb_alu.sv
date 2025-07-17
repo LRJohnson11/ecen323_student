@@ -11,7 +11,9 @@
 // Note for Instructor and TA's: If this testbench is modified, make sure that the exercise questions from the learning  
 // suite lab report are accurate with corresponding the simulation timing and answer. 
 
-module tb_alu();
+module tb_alu
+#(BUS_WIDTH = 8)
+();
 
 	logic tb_zero;
 	logic [31:0] tb_op1, tb_op2, tb_result;
@@ -89,7 +91,8 @@ module tb_alu();
 	endtask
 
 	// Instance alu module
-	alu alu_dut(.op1(tb_op1), .op2(tb_op2), .alu_op(tb_alu_op),
+	alu#(.BUS_WIDTH(BUS_WIDTH))
+	alu_dut(.op1(tb_op1), .op2(tb_op2), .alu_op(tb_alu_op),
 		.result(tb_result), .zero(tb_zero));
 
 	// Start of simulation
