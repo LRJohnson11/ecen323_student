@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# xsim v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Aug 29 17:11:52 2025
+# Process ID         : 755377
+# Current directory  : /auto/fsh/lrjohnso/riscv_labs/lab05
+# Command line       : xsim -log tb_regfile.log -mode tcl -source {xsim.dir/work.tb_simple_datapath/xsim_script.tcl}
+# Log file           : /auto/fsh/lrjohnso/riscv_labs/lab05/tb_regfile.log
+# Journal file       : /auto/fsh/lrjohnso/riscv_labs/lab05/xsim.jou
+# Running On         : DIGITAL-06
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-14500
+# CPU Frequency      : 3900.000 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16422 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18569 MB
+# Available Virtual  : 13516 MB
+#-----------------------------------------------------------
+source xsim.dir/work.tb_simple_datapath/xsim_script.tcl
+# xsim {work.tb_simple_datapath} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+*** Start of Simulation ***
+[125 ns] *** Testing immediate instructions ***
+[125 ns] [PC=00200000] addi x1,x0,1
+[175 ns] [PC=00200004] addi x2,x1,4093
+[225 ns] [PC=00200008] andi x3,x2,4095
+[275 ns] [PC=0020000c] andi x3,x3,255
+[325 ns] [PC=00200010] ori x4,x3,1792
+[375 ns] [PC=00200014] ori x5,x0,3237
+[425 ns] [PC=00200018] xori x6,x2,4095
+[475 ns] [PC=0020001c] slli x7,x2,1
+[525 ns] [PC=00200020] srai x8,x7,1
+[575 ns] [PC=00200024] srli x9,x2,1
+[625 ns] *** Testing x0 Register ***
+[625 ns] [PC=00200028] addi x0,x0,1
+[675 ns] *** Testing ALU register instructions ***
+[675 ns] [PC=0020002c] add x7,x1,x2
+[725 ns] [PC=00200030] add x8,x3,x1
+[775 ns] [PC=00200034] add x9,x0,x1
+[825 ns] [PC=00200038] add x10,x0,x2
+[875 ns] [PC=0020003c] sub x11,x1,x2
+[925 ns] [PC=00200040] sub x12,x3,x1
+[975 ns] [PC=00200044] sub x13,x0,x1
+[1025 ns] [PC=00200048] sub x14,x0,x2
+[1075 ns] [PC=0020004c] and x15,x2,x3
+[1125 ns] [PC=00200050] or x16,x0,x3
+[1175 ns] [PC=00200054] xor x17,x0,x2
+[1225 ns] [PC=00200058] slt x18,x0,x1
+[1275 ns] [PC=0020005c] slt x19,x1,x0
+[1325 ns] [PC=00200060] slt x20,x2,x1
+[1375 ns] [PC=00200064] slt x21,x1,x2
+[1425 ns] [PC=00200068] sll x22,x1,x1
+[1475 ns] [PC=0020006c] sll x23,x2,x22
+[1525 ns] [PC=00200070] sra x24,x23,x1
+[1575 ns] [PC=00200074] srl x25,x24,x1
+[1625 ns] *** Testing Load Memory instructions ***
+[1625 ns] [PC=00200078] lw x22,0(x0)
+[1675 ns] [PC=0020007c] lw x23,4(x0)
+[1725 ns] [PC=00200080] lw x24,8(x0)
+[1775 ns] [PC=00200084] lw x25,12(x0)
+[1825 ns] [PC=00200088] addi x26,x0,16
+[1875 ns] [PC=0020008c] lw x27,-4(x26)
+[1925 ns] [PC=00200090] lw x28,-8(x26)
+[1975 ns] [PC=00200094] lw x29,-12(x26)
+[2025 ns] [PC=00200098] lw x30,-16(x26)
+[2075 ns] *** Testing Store Memory instructions ***
+[2075 ns] [PC=0020009c] sw x1,0(x0)
+[2125 ns] [PC=002000a0] sw x2,4(x0)
+[2175 ns] [PC=002000a4] sw x3,8(x0)
+[2225 ns] [PC=002000a8] sw x4,12(x0)
+[2275 ns] [PC=002000ac] lw x22,0(x0)
+[2325 ns] [PC=002000b0] lw x23,4(x0)
+[2375 ns] [PC=002000b4] lw x24,8(x0)
+[2425 ns] [PC=002000b8] lw x25,12(x0)
+[2475 ns] [PC=002000bc] addi x26,x0,16
+[2525 ns] [PC=002000c0] sw x5,-4(x26)
+[2575 ns] [PC=002000c4] sw x6,-8(x26)
+[2625 ns] [PC=002000c8] sw x7,-12(x26)
+[2675 ns] [PC=002000cc] sw x8,-16(x26)
+[2725 ns] [PC=002000d0] lw x27,-4(x26)
+[2775 ns] [PC=002000d4] lw x28,-8(x26)
+[2825 ns] [PC=002000d8] lw x29,-12(x26)
+[2875 ns] [PC=002000dc] lw x30,-16(x26)
+[2925 ns] *** Testing Branch instructions ***
+[2925 ns] [PC=002000e0] beq x0,x1,16
+[2975 ns] [PC=002000e4] beq x1,x1,512
+[3025 ns] [PC=002002e4] beq x0,x1,-128
+*** Error: PC=002004e4 but expect 002002e4 at time 3028 ns
+$finish called at time : 3038 ns : File "/auto/fsh/lrjohnso/riscv_labs/lab05/tb_simple_datapath.sv" Line 84
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Aug 29 17:11:54 2025...

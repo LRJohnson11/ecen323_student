@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 21 2025
+22:59:56
+/auto/fsh/lrjohnso/riscv_labs/lab05/alu.sv,1756255510,systemVerilog,,/auto/fsh/lrjohnso/riscv_labs/lab05/regfile.sv,,alu,,,,,,,,
+/auto/fsh/lrjohnso/riscv_labs/lab05/alu_defs.sv,1756251532,systemVerilog,/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_opcodes.sv,/auto/fsh/lrjohnso/riscv_labs/lab05/alu.sv,,alu_defs,,,,,,,,
+/auto/fsh/lrjohnso/riscv_labs/lab05/regfile.sv,1756255474,systemVerilog,,/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_datapath_constants.sv,,regfile,,,,,,,,
+/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_datapath_constants.sv,1756252128,systemVerilog,/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_opcodes.sv,/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_simple_datapath.sv,,datapathConstants,,,,,,,,
+/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_opcodes.sv,1756426698,systemVerilog,/auto/fsh/lrjohnso/riscv_labs/lab05/alu.sv;/auto/fsh/lrjohnso/riscv_labs/lab05/regfile.sv;/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_simple_datapath.sv;/auto/fsh/lrjohnso/riscv_labs/lab05/tb_simple_datapath.sv,/auto/fsh/lrjohnso/riscv_labs/lab05/alu_defs.sv,,$unit_riscv_opcodes_sv_189851095;riscv_opcodes,,,,,,,,
+/auto/fsh/lrjohnso/riscv_labs/lab05/riscv_simple_datapath.sv,1756509136,systemVerilog,,/auto/fsh/lrjohnso/riscv_labs/lab05/tb_simple_datapath.sv,,riscv_simple_datapath,,,,,,,,
+/auto/fsh/lrjohnso/riscv_labs/lab05/tb_simple_datapath.sv,1748899184,systemVerilog,,,,tb_simple_datapath,,,,,,,,

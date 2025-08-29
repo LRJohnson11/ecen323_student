@@ -1,0 +1,1 @@
+"regfile" -debug "typical" --nolog -L "unisims_ver" --timescale "1ns/1ps" 

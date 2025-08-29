@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# xsim v2025.1 (64-bit)
+# SW Build 6140274 on Wed May 21 22:58:25 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Fri Aug 29 17:04:19 2025
+# Process ID         : 753455
+# Current directory  : /auto/fsh/lrjohnso/riscv_labs/lab05
+# Command line       : xsim -log tb_regfile.log -source {xsim.dir/work.tb_simple_datapath/xsim_script.tcl}
+# Log file           : /auto/fsh/lrjohnso/riscv_labs/lab05/tb_regfile.log
+# Journal file       : /auto/fsh/lrjohnso/riscv_labs/lab05/xsim.jou
+# Running On         : DIGITAL-06
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.2 LTS
+# Processor Detail   : Intel(R) Core(TM) i5-14500
+# CPU Frequency      : 1479.495 MHz
+# CPU Physical cores : 14
+# CPU Logical cores  : 20
+# Host memory        : 16422 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18569 MB
+# Available Virtual  : 13421 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:ac701:part0:1.4 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/ac701/1.4/board.xml as part xc7a200tfbg676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.0/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:emb-plus-vpr-4616:part0:1.1 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/emb-plus-vpr-4616/1.1/board.xml as part xcve2302-sfva784-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.7 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.7/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:scu35:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/scu35/1.0/board.xml as part xcsu35p-sbvb625-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.0/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:sp701:part0:1.1 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/sp701/1.1/board.xml as part xc7s100fgga676-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:v80:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/v80/1.0/board.xml as part xcv80-lsva4737-2mhp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.5 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.5/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.1 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.2 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.2/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek385:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek385/1.0/board.xml as part xc2ve3858-ssva2112-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.2 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.2/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.2 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.2/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/2025.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+source xsim.dir/work.tb_simple_datapath/xsim_script.tcl
+# set_param project.enableReportConfiguration 0
+# load_feature core
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/2025.1/Vivado/data/ip'.
+# xsim {work.tb_simple_datapath} -autoloadwcfg
+Time resolution is 1 ps
+add_wave {{/tb_simple_datapath/datapath}} 
+run 3000ns
+*** Start of Simulation ***
+[125 ns] *** Testing immediate instructions ***
+[125 ns] [PC=00200000] addi x1,x0,1
+[175 ns] [PC=00200004] addi x2,x1,4093
+[225 ns] [PC=00200008] andi x3,x2,4095
+[275 ns] [PC=0020000c] andi x3,x3,255
+[325 ns] [PC=00200010] ori x4,x3,1792
+[375 ns] [PC=00200014] ori x5,x0,3237
+[425 ns] [PC=00200018] xori x6,x2,4095
+[475 ns] [PC=0020001c] slli x7,x2,1
+[525 ns] [PC=00200020] srai x8,x7,1
+[575 ns] [PC=00200024] srli x9,x2,1
+[625 ns] *** Testing x0 Register ***
+[625 ns] [PC=00200028] addi x0,x0,1
+[675 ns] *** Testing ALU register instructions ***
+[675 ns] [PC=0020002c] add x7,x1,x2
+[725 ns] [PC=00200030] add x8,x3,x1
+[775 ns] [PC=00200034] add x9,x0,x1
+[825 ns] [PC=00200038] add x10,x0,x2
+[875 ns] [PC=0020003c] sub x11,x1,x2
+[925 ns] [PC=00200040] sub x12,x3,x1
+[975 ns] [PC=00200044] sub x13,x0,x1
+[1025 ns] [PC=00200048] sub x14,x0,x2
+[1075 ns] [PC=0020004c] and x15,x2,x3
+[1125 ns] [PC=00200050] or x16,x0,x3
+[1175 ns] [PC=00200054] xor x17,x0,x2
+[1225 ns] [PC=00200058] slt x18,x0,x1
+[1275 ns] [PC=0020005c] slt x19,x1,x0
+[1325 ns] [PC=00200060] slt x20,x2,x1
+[1375 ns] [PC=00200064] slt x21,x1,x2
+[1425 ns] [PC=00200068] sll x22,x1,x1
+[1475 ns] [PC=0020006c] sll x23,x2,x22
+[1525 ns] [PC=00200070] sra x24,x23,x1
+[1575 ns] [PC=00200074] srl x25,x24,x1
+[1625 ns] *** Testing Load Memory instructions ***
+[1625 ns] [PC=00200078] lw x22,0(x0)
+[1675 ns] [PC=0020007c] lw x23,4(x0)
+[1725 ns] [PC=00200080] lw x24,8(x0)
+[1775 ns] [PC=00200084] lw x25,12(x0)
+[1825 ns] [PC=00200088] addi x26,x0,16
+[1875 ns] [PC=0020008c] lw x27,-4(x26)
+[1925 ns] [PC=00200090] lw x28,-8(x26)
+[1975 ns] [PC=00200094] lw x29,-12(x26)
+[2025 ns] [PC=00200098] lw x30,-16(x26)
+[2075 ns] *** Testing Store Memory instructions ***
+[2075 ns] [PC=0020009c] sw x1,0(x0)
+[2125 ns] [PC=002000a0] sw x2,4(x0)
+[2175 ns] [PC=002000a4] sw x3,8(x0)
+[2225 ns] [PC=002000a8] sw x4,12(x0)
+[2275 ns] [PC=002000ac] lw x22,0(x0)
+[2325 ns] [PC=002000b0] lw x23,4(x0)
+[2375 ns] [PC=002000b4] lw x24,8(x0)
+[2425 ns] [PC=002000b8] lw x25,12(x0)
+[2475 ns] [PC=002000bc] addi x26,x0,16
+[2525 ns] [PC=002000c0] sw x5,-4(x26)
+[2575 ns] [PC=002000c4] sw x6,-8(x26)
+[2625 ns] [PC=002000c8] sw x7,-12(x26)
+[2675 ns] [PC=002000cc] sw x8,-16(x26)
+[2725 ns] [PC=002000d0] lw x27,-4(x26)
+[2775 ns] [PC=002000d4] lw x28,-8(x26)
+[2825 ns] [PC=002000d8] lw x29,-12(x26)
+[2875 ns] [PC=002000dc] lw x30,-16(x26)
+[2925 ns] *** Testing Branch instructions ***
+[2925 ns] [PC=002000e0] beq x0,x1,16
+[2975 ns] [PC=002000e4] beq x1,x1,512
+run 25ns
+[3025 ns] [PC=002002e4] beq x0,x1,-128
+run 10ns
+*** Error: PC=002000e4 but expect 002002e4 at time 3028 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting xsim at Fri Aug 29 17:11:24 2025...
