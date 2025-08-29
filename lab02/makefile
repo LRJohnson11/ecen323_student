@@ -18,7 +18,7 @@ simulate_calc_gui:
 	xelab tb_calc -debug typical --nolog -L unisims_ver --timescale 1ns/1ps
 	xsim tb_calc -gui --nolog
 source:
-	source /tools/Xilinx/Vivado/2024.1/settings64.sh
+	source /tools/Xilinx/2025.1/Vivado/settings64.sh
 clean:
 	rm *.jou *.log *.pb
 	rm -rf .Xil alu_sim xsim.dir
